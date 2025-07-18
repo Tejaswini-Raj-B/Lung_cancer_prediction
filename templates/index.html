@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lung Cancer Risk Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lung Cancer Risk Predictor</h1>
+        <p class="subheading">Please fill in the following health-related questions to assess your risk of lung cancer.</p>
+        
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label>Age:</label>
+                <input type="number" name="Age" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <select name="Gender">
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you smoke?</label>
+                <select name="Smoking">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you have yellow fingers (from nicotine)?</label>
+                <select name="Yellow_Fingers">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you experience anxiety frequently?</label>
+                <select name="Anxiety">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Are you influenced by peer pressure?</label>
+                <select name="Peer_Pressure">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you have a chronic disease?</label>
+                <select name="Chronic_Disease">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you often feel fatigue?</label>
+                <select name="Fatigue">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you have any allergies?</label>
+                <select name="Allergy">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you experience wheezing?</label>
+                <select name="Wheezing">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you consume alcohol regularly?</label>
+                <select name="Alcohol">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you cough frequently?</label>
+                <select name="Coughing">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you feel shortness of breath?</label>
+                <select name="Shortness_of_Breath">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you have difficulty swallowing?</label>
+                <select name="Swallowing_Difficulty">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you experience chest pain?</label>
+                <select name="Chest_Pain">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <button type="submit">Predict My Risk</button>
+        </form>
+    </div>
+</body>
+</html>
